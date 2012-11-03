@@ -37,7 +37,7 @@ angular.module('SlideshowModule', ['KeyHandlerModule', 'compile', 'ui'])
 		// neater, but that API seems to struggle with HTML ATM.
 		$http({
 			method: "GET",
-			url: '/slides/' + $routeParams.slideName + ".html",
+			url: 'slides/' + $routeParams.slideName + ".html",
 			params: {
 				date: new Date(),
 			}
