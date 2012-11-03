@@ -1,0 +1,27 @@
+<div ng-init="
+	revealMax = 1;
+	code1 = 'angular.module(
+	\'ModuleName\',
+	[\'dependency1\', \'dependency2\']
+);';
+	code2 = 'angular.module(\'ModuleName\')
+	.controller(...)
+	.filter(...)
+	.factory(...)
+	.directive(...)
+	.config(...)
+	.value(...)
+	.constant(...);';
+"></div>
+
+<h1>Module Structure</h1>
+
+<div>
+	<h3>Create a module</h3>
+	<textarea ui-codemirror="{mode: 'javascript'}" ng-model="code1"></textarea>
+</div>
+
+<div reveal-at="1">
+	<h3>Declare the services it provides.</h3>
+	<textarea ui-codemirror="{mode: 'javascript'}" ng-model="code2"></textarea>
+</div>

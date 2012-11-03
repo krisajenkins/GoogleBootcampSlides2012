@@ -1,0 +1,6 @@
+<div class="slide">
+	<div compile="content" ng-hide="showRawSlide"></div>
+	<div class="diagnostic">{{nextSlide()}} {{revealLevel}}/{{revealMax}} {{slideId}}</div>
+
+	<span class="rawSlide" ng-show="showRawSlide"><textarea ui-codemirror="{mode: 'xml'}" ng-model="content"></textarea></span>
+</div>

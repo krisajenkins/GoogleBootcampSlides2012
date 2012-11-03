@@ -1,0 +1,30 @@
+<div ng-init="
+	revealMax = 2;
+	code1 = 'angular.module(\'HelloWorldApp\', []);';
+	code2 = 'angular.module(\'HelloWorldApp\')
+	.controller(
+		\'HelloController\',
+		function ($scope) {
+			$scope.name = \'World\';
+
+			$scope.greeting = function () {
+				return \'Hello \' + $scope.name;
+			}
+		}
+	);';
+	code3 = '<html ng-app=\'HelloWorldApp\'>';
+"></div>
+
+<h1>Module: Example</h1>
+
+<div>
+	<textarea ui-codemirror="{mode: 'javascript'}" ng-model="code1"></textarea>
+</div>
+
+<div reveal-at="1">
+	<textarea ui-codemirror="{mode: 'javascript'}" ng-model="code2"></textarea>
+</div>
+
+<div reveal-at="2">
+	<textarea ui-codemirror="{mode: 'xml'}" ng-model="code3"></textarea>
+</div>

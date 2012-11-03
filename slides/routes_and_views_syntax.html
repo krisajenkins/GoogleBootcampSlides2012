@@ -1,0 +1,28 @@
+<div ng-init="
+	revealMax = 1;
+	code1 = '.config(function(\'$routeProvider\') {
+	.when(\'/\', {
+		templateUrl: \'templates/front_page.html\',
+		controller: \'FrontPageController\'
+	})
+	.when(\'/thing/:id\', {
+		templateUrl: \'templates/things.html\',
+		controller: \'ThingController\'
+	})
+	.otherwise({redirectTo: \'/\'});
+});';
+	code2 = '.controller(
+	\'ThingController\',
+	function ($scope, $routeParam) {
+		$scope.id = $routeParam.id;
+	}
+);';
+"></div>
+
+<h1>Routes and Views</h1>
+
+<textarea ui-codemirror="{mode: 'javascript'}" ng-model="code1"></textarea>
+
+<div reveal-at='1'>
+	<textarea ui-codemirror="{mode: 'javascript'}" ng-model="code2"></textarea>
+</div>

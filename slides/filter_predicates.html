@@ -1,0 +1,26 @@
+<h1>Filter Predicates</h1>
+
+<div ng-controller="ThingsController">
+	<ul>
+		<li ng-repeat
+				="item in items | filter: isLarge">
+			{{item.count}} x {{item.name}}
+		</li>
+	</ul>
+</div>
+
+<script type="text/javascript">
+	function ThingsController($scope) {
+		$scope.isLarge = function (item) {
+			return item.count > 5000;
+		}
+
+		$scope.items = [
+			{name: 'Cheese',    count: 1212},
+			{name: 'Elephant',  count: 2941},
+			{name: 'Ball',      count: 4948},
+			{name: 'Dog',       count: 9913},
+			{name: 'Apple',     count: 37382},
+		];
+	}
+</script>

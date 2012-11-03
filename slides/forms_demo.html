@@ -1,0 +1,22 @@
+<style type="text/css">
+	input.ng-dirty.ng-valid {
+		background-color: #4cc983; // Light green.
+	}
+	input.ng-dirty.ng-invalid {
+		background-color: #c94c4c; // Light red.
+	}
+</style>
+
+<h1>Forms</h1>
+
+<form novalidate name='aForm'>
+	<div>Homepage:</div>
+	<input type='url' required ng-model='homepage'/>
+
+	<div>Email:</div>
+	<input type='email' required ng-model='email'/>
+
+	<div>
+		<button ng-disabled="! aForm.$valid">Save</button>
+	</div>
+</form>

@@ -1,0 +1,27 @@
+<div ng-init="
+	revealMax = 2;
+	code1 = 'angular.module(\'MyModule\', [\'ngResource\'])
+	.factory(\'FlickrAPI\', function ($resource) {
+		return $resource(
+			\'http://api.flickr.com/services/feeds/photos_public.gne\',
+			{
+				format: \'json\',
+				jsoncallback: \'JSON_CALLBACK\'
+			},
+			{search: {method: \'JSONP\'}}
+		);
+	});';
+"></div>
+<h1>Resources: Overview</h1>
+
+One of AngularJS's common services.
+
+<div reveal-at="1">
+	<textarea ui-codemirror ng-model="code1"></textarea>
+</div>
+
+<div reveal-at="2">
+	<textarea ui-codemirror ng-model="code2"></textarea>
+</div>
+
+

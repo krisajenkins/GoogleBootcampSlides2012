@@ -1,0 +1,16 @@
+<div ng-init="
+	code1 = '.factory(\'myApi\', function($resource) {
+	return $resource(
+		<url>,
+		{<common parameters>},
+		{
+			method1: {<parameters>},
+			method2: {<parameters>},
+			...
+		},
+});';
+"></div>
+
+<h1>ngResource: Overview</h1>
+
+<textarea ui-codemirror="{mode: 'javascript'}" ng-model="code1"></textarea>

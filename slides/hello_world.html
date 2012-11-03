@@ -1,0 +1,16 @@
+<div ng-init="
+	revealMax = 1;
+	code = '<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<script src=\'/lib/angular.js\'></script>
+	</head>
+	<body>
+		<p>Hello World!</p>
+	</body>
+</html>'"></div>
+<h1>But First, Hello World</h1>
+
+<div reveal-at="1">
+	<textarea ui-codemirror="{mode: 'xml'}" ng-model="code"></textarea>
+</div>

@@ -1,0 +1,49 @@
+// 960 Grid system in Less.
+// A slight rework of https://github.com/DavidTurner/960-LESS
+
+// Defining number of columns in the grid.
+// Common Values would be 12, 16 or 24
+@def_grid:16;
+
+.container(){
+	margin:0 auto;
+	width:960px;
+}
+
+// Works out the width of elements based
+// on total number of columns and width
+// number of columns being displayed.
+// Removes 20px for margins
+.grid(@cols:'',@grid:@def_grid){
+	display:inline;
+	float:left;
+  margin:0 10px;
+	width:(960px/@grid * @cols)-20;
+}
+
+// Allows for padding before element
+.prefix(@cols:'',@grid:@def_grid){
+	padding-left:(960px/@grid * @cols);
+}
+// Allows for padding after element
+.suffix(@cols:'',@grid:@def_grid){
+	padding-right:(960px/@grid * @cols);
+}
+// Removes left margin
+.alpha(){
+	margin-left:0;
+}
+// Removes right margin
+.omega(){
+	margin-right:0;
+}
+
+.push(@move:'',@grid:@def_grid){
+	position:relative;
+	left:(960px/@grid * @move);
+}
+
+.pull(@move:'',@grid:@def_grid){
+	position:relative;
+	left:(960px/@grid * @move) * -1;
+}

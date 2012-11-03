@@ -1,0 +1,28 @@
+<h1>Filters for Filtering</h1>
+
+<div ng-controller="ThingsController">
+	<input type="text" placeholder="Search"
+		autofocus
+		ng-model="query"/>
+
+	<ul>
+		<li ng-repeat=
+				"item in items | filter: query">
+			{{item.name}}
+			x
+			{{item.count}}
+		</li>
+	</ul>
+</div>
+
+<script type="text/javascript">
+	function ThingsController($scope) {
+		$scope.items = [
+			{name: 'Cheese',    count: 1212},
+			{name: 'Elephant',  count: 2941},
+			{name: 'Ball',      count: 4948},
+			{name: 'Dog',       count: 9913},
+			{name: 'Apple',     count: 37382},
+		];
+	}
+</script>

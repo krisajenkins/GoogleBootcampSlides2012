@@ -1,0 +1,24 @@
+<div ng-init="
+	code1 = '.factory(\'MailApi\', function($resource) {
+	return $resource(
+		\'https://gmail.com/api/:email\',
+		{format: \'JSON\'},
+		{search: {
+				method: \'GET\',
+				params: {folder: \'inbox\'}
+				isArray: true,
+		}},
+});';
+
+	code2 = 'MailApi.search({email: \'kris@gmail.com\',
+	string: \'sarajevo\'});
+=> GET https://gmail.com/api/kris@gmail.com
+	?format=JSON
+	&folder=inbox
+	&string=sarajevo';
+"></div>
+
+<h1>ngResource: Overview</h1>
+
+<textarea ui-codemirror="{mode: 'javascript'}" ng-model="code1"></textarea>
+<textarea ui-codemirror="{mode: 'javascript'}" ng-model="code2"></textarea>

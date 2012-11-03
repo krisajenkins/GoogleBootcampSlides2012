@@ -1,0 +1,21 @@
+<h1>Controllers &amp; Scopes</h1>
+
+<div ng-controller="NumberController">
+	<input type="number" autofocus
+		ng-model="value"/>
+
+	<div>n<sup>1</sup>: {{power(1)}}</div>
+	<div>n<sup>2</sup>: {{power(2)}}</div>
+	<div>n<sup>4</sup>: {{power(4)}}</div>
+</div>
+
+<script type="text/javascript">
+	function NumberController($scope) {
+		$scope.value = 0;
+
+		$scope.power = function(y) {
+			return Math.pow($scope.value, y);
+		}
+	}
+</script>
+

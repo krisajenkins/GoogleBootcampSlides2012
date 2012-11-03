@@ -1,0 +1,19 @@
+<div ng-init="
+	revealMax = 1;
+	code1 = '\{\{expression
+			| afilter
+			| afilter: arg
+			| afilter: arg1: arg2
+			| ...\}\}';
+	code2 = '\{\{item in items | orderBy: \'name\' | limitTo: 10\}\}'
+"></div>
+
+<h1>Filters Syntax</h1>
+
+<textarea ui-codemirror ng-model="code1"></textarea>
+
+<div reveal-at="1">
+	<h2>Example</h2>
+
+	<textarea ui-codemirror ng-model="code2"></textarea>
+</div>

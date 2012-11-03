@@ -1,0 +1,25 @@
+<div ng-init="
+	revealMax = 3;
+	code1 = 'angular.module(\'ModuleName\')
+	.filter(\'somename\', function () {
+		return function (thing, arg) {
+			// ...
+			return newThing;
+		};
+	});';
+	code2 = '\{\{item in items | somename: \'name\'\}\}'
+"></div>
+
+<h1>Custom Filter</h1>
+
+<div reveal-at='1'>
+	<textarea ui-codemirror="{mode: 'javascript'}" ng-model="code1"></textarea>
+</div>
+
+<div reveal-at='2'>
+	<textarea ui-codemirror="{mode: 'javascript'}" ng-model="code2"></textarea>
+</div>
+
+<p reveal-at='3'>
+	Demo: Regexp filter...
+</p>

@@ -1,0 +1,31 @@
+<h1>The Filter Called 'Filter'</h1>
+
+<div ng-init="
+	revealMax = 3;
+	code1 = '// Filter for items with
+//	a property like /.*John.*/
+\{\{ item in items | filter: \'John\'\}\}';
+code2 = '// Filter for items with
+//	a name property like /.*John.*/
+//	an address property like /.*W.*/
+//	any property with like /.*a.*/
+\{\{ item in items | filter: {
+                       name: \'John\',
+                       address: \'W\',
+                       $: \'a\',
+                   }\}\}';
+	code3 = '// Call a predicate function
+\{\{ item in items | filter: somePredicate}\}';
+"></div>
+
+<div reveal-at="1">
+	<textarea ui-codemirror ng-model="code1"></textarea>
+</div>
+
+<div reveal-at="2">
+	<textarea ui-codemirror ng-model="code2"></textarea>
+</div>
+
+<div reveal-at="3">
+	<textarea ui-codemirror ng-model="code3"></textarea>
+</div>

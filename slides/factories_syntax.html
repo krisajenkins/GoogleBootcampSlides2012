@@ -1,0 +1,18 @@
+<div ng-init="
+	revealMax = 2;
+	code1 = 'angular.module(\'ModuleName\')
+	.factory(\'somename\', function () {
+		// ...
+		return object;
+	});';
+"></div>
+
+<h1>Service Factory</h1>
+
+<div reveal-at='1'>
+	<textarea ui-codemirror="{mode: 'javascript'}" ng-model="code1"></textarea>
+</div>
+
+<p reveal-at='2'>
+	Too easy. Let's make our first factory object more interesting...
+</p>

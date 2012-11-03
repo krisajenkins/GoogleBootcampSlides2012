@@ -1,0 +1,151 @@
+@medium-gap: 20px;
+@default-shadow: 0 5px 15px gray;
+@light-gray: #eee;
+@medium-gray: #777;
+
+.slide {
+	position: relative;
+	width: 800px;
+	height: 600px;
+	margin: @medium-gap auto;
+	padding: @medium-gap * 2;
+	border: solid 1px gray;
+	box-shadow: @default-shadow;
+	overflow-x: hidden;
+	overflow-y: hidden;
+
+	@font-size: 40pt;
+	font-size: @font-size;
+	font-family: 'Lato', sans-serif;
+
+	img {
+		box-shadow: @default-shadow;
+		margin: @medium-gap;
+	}
+
+	h1 {
+		font-size: @font-size * 1.15;
+		margin-top: 0;
+	}
+
+	h2 {
+		font-style: italic;
+		font-size: @font-size;
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+	}
+	
+	h3 {
+		font-size: @font-size * 0.75;
+		margin-top: 0.25em;
+		margin-bottom: 0.25em;
+	}
+	
+	input,
+	button {
+		font-size: @font-size;
+		padding: 0 0.2em;
+	}
+
+	ul, ol, p {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+		margin-left: 2em;
+	}
+
+	li {
+		margin-bottom: 0.2em;
+	}
+
+	p {
+		margin-left: 1em;
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+	}
+	
+	table {
+		margin: 0.5em auto;
+	}
+	
+	em {
+		color: @medium-gray;
+	}
+
+	a {
+		color: black;
+		text-decoration: none;
+		border-left: solid 1px @medium-gray;
+		border-right: solid 1px @medium-gray;
+		background-color: @light-gray;
+		padding: 0 0.2em;
+
+		&:visited {
+			color: black;
+		}
+
+		&:hover {
+			color: white;
+			background-color: black;
+		}
+	}
+
+	blockquote {
+		font-style: italic;
+
+		.attribution {
+			margin-top: 1em;
+			text-align: right;
+		}
+	}
+
+	table {
+		border-collapse: collapse;
+
+		th, td {
+			border: solid 2px @medium-gray;
+			padding: 0.5em;
+		}
+
+		th {
+			text-align: right;
+		}
+
+		thead th {
+			text-align: center;
+		}
+	}
+
+	.diagnostic, .footnote {
+		position: absolute;
+		margin: 0;
+	}
+
+	.diagnostic {
+		font-size: 0.25 * @font-size;
+		color: gray;
+		bottom: @medium-gap;
+		left: @medium-gap;
+	}
+
+	.footnote {
+		font-size: 0.5 * @font-size;
+		bottom: @medium-gap;
+		right: @medium-gap;
+		text-align: right;
+	}
+
+	.CodeMirror {
+		font-size: @font-size / 2;
+		margin-top: 0.5em;
+	}
+
+	.CodeMirror-scroll {
+		height: auto;
+		overflow-y: hidden;
+		overflow-x: auto;
+	}
+
+	.rawSlide .CodeMirror {
+		margin-top: 0;
+	}
+}

@@ -1,0 +1,27 @@
+<div ng-init="
+	revealMax = 4;
+	code1 = '<input type=\'text\' autofocus ng-model=\'name\'/\>';
+	code2 = '<span>{{name}}</span>';
+	code3 = '<span>{{name.length}}</span>';
+"></div>
+
+<h1>Binding: Demo</h1>
+
+<textarea ui-codemirror="{mode: 'xml'}" ng-model="code1"></textarea>
+<div compile="code1"></div>
+
+<div reveal-at="1">
+	<textarea ui-codemirror="{mode: 'xml'}" ng-model="code2"></textarea>
+</div>
+
+<div reveal-at="2">
+	=> <span compile="code2"></span>
+</div>
+
+<div reveal-at="3">
+	<textarea ui-codemirror="{mode: 'xml'}" ng-model="code3"></textarea>
+</div>
+
+<div reveal-at="4">
+	=> <span compile="code3"></span>
+</div>
