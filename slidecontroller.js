@@ -74,4 +74,5 @@ angular.module('SlideshowModule', ['KeyHandlerModule', 'compile', 'ui'])
 		keyHandler.bind('body', $scope, "page-down", this.next);
 		keyHandler.bind('body', $scope, "right-cmd", this.toggleRawSlide);
 		keyHandler.bind('body', $scope, "magic", this.toggleRawSlide);
+		keyHandler.bind('body', $scope, "alt-gr", this.toggleRawSlide);
 	});

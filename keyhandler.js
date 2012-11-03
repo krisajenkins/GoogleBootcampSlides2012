@@ -4,6 +4,7 @@
 angular.module('KeyHandlerModule', [])
 	.factory('keyHandler', function () {
 		var keymap = {
+			"alt-gr":      18,
 			"space":       32,
 			"page-up":     33,
 			"page-down":   34,
