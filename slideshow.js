@@ -3,7 +3,7 @@
 
 angular.module('Bootcamp', ['SlideshowModule', 'ui'])
 	.value('ui.config', {codemirror: {theme: 'eclipse', tabSize: '2'}})
-	.config(['$routeProvider', function ($routeProvider) {
+	.config(function ($routeProvider) {
 		$routeProvider
 			.when('/slide/:slideName', {
 				templateUrl: 'templates/slide_page.html',
@@ -60,4 +60,4 @@ angular.module('Bootcamp', ['SlideshowModule', 'ui'])
 				},
 			})
 			.otherwise({redirectTo: '/slide/start'});
-	}]);
+	});
