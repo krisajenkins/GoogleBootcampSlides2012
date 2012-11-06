@@ -83,11 +83,6 @@ angular.module('Bootcamp', ['SlideshowModule', 'ui'])
 							'questions_2',
 							'okay_go_2', // TODO Suggestions.
 
-
-// ------------------------------ Happy Line ------------------------------.
-
-							'directives_options',
-
 							'module_structure_annotated',
 							'missing_pieces',
 							'feedback',
