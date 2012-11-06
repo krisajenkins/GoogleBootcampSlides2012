@@ -1,14 +1,15 @@
 <div ng-init="
-	code1 = '.config(function(\'$routeProvider\') {
-	.when(\'/\', {
-		templateUrl: \'templates/front_page.html\',
-		controller: \'FrontPageController\'
-	})
-	.when(\'/thing/:id\', {
-		templateUrl: \'templates/things.html\',
-		controller: \'ThingController\'
-	})
-	.otherwise({redirectTo: \'/\'});
+	code1 = '.config(function($routeProvider) {
+	$routeProvider
+		.when(\'/\', {
+			templateUrl: \'templates/front_page.html\',
+			controller: \'FrontPageController\'
+		})
+		.when(\'/thing/:id\', {
+			templateUrl: \'templates/things.html\',
+			controller: \'ThingController\'
+		})
+		.otherwise({redirectTo: \'/\'});
 });';
 	code2 = '.controller(
 	\'ThingController\',

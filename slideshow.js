@@ -55,6 +55,46 @@ angular.module('Bootcamp', ['SlideshowModule', 'ui'])
 
 							// Hack 1.
 							'okay_go_1',
+
+							// Angular: Structuring.
+							'how_did_we_do',
+							'modules_yay',
+							'module_structure',
+
+							'modules_example',
+
+							'demo_converting_app',
+
+							'custom_filters',
+							'interlude_subcontrollers',
+							'factories',
+							'factories_syntax',
+
+							'resource',
+							'resource_syntax',
+							'resource_example',
+							'resource_details',
+
+							'routes_and_views',
+							'routes_and_views_syntax',
+							'routes_and_views_parameters',
+
+							// Hack 2.
+							'questions_2',
+							'okay_go_2', // TODO Suggestions.
+
+
+// ------------------------------ Happy Line ------------------------------.
+
+							'directives_options',
+
+							'module_structure_annotated',
+							'missing_pieces',
+							'feedback',
+
+							// Presentations.
+							'presentations',
+							'bye',
 						];
 					}
 				},
