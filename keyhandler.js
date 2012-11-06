@@ -14,15 +14,16 @@ angular.module('KeyHandlerModule', [])
 			"down-arrow":  40,
 			"left-cmd":    91,
 			"right-cmd":   93,
-			"magic":      190,
 		};
 
 		function KeyHandler() {
-			this.bind = function (elementName, $scope, keycode, fn) {
-				keycode = keymap[keycode] || keycode;
+			this.bind = function (elementName, $scope, fn, keycodes) {
+				keycodes = keycodes.map(function (keycode) {
+					return keymap[keycode] || keycode;
+				});
 
 				var keyHandler = function (event) {
-					if (event.which === keycode) {
+					if (keycodes.indexOf(event.which) !== -1) {
 						fn.apply($scope);
 						$scope.$apply();
 					}

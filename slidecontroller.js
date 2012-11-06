@@ -70,11 +70,7 @@ angular.module('SlideshowModule', ['KeyHandlerModule', 'compile', 'ui'])
 		};
 
 		// Keyboard Bindings.
-		keyHandler.bind('body', $scope, "left-arrow",  this.previous);
-		keyHandler.bind('body', $scope, "right-arrow", this.next);
-		keyHandler.bind('body', $scope, "page-up", this.previous);
-		keyHandler.bind('body', $scope, "page-down", this.next);
-		keyHandler.bind('body', $scope, "right-cmd", this.toggleRawSlide);
-		keyHandler.bind('body', $scope, "magic", this.toggleRawSlide);
-		keyHandler.bind('body', $scope, "alt-gr", this.toggleRawSlide);
+		keyHandler.bind('body', $scope, this.next,            ["right-arrow", "page-down"]);
+		keyHandler.bind('body', $scope, this.previous,        ["left-arrow", "page-up"]);
+		keyHandler.bind('body', $scope, this.toggleRawSlide,  ["right-cmd", "alt-gr"]);
 	});
