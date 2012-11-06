@@ -1,7 +1,4 @@
-<h1>The Filter Called 'Filter'</h1>
-
-<div
-	ng-init="
+<div ng-init="
 	code1 = '// Filter for items with
 //	a property like /.*John.*/
 \{\{ item in items | filter: \'John\'\}\}';
@@ -17,6 +14,8 @@ code2 = '// Filter for items with
 	code3 = '// Call a predicate function
 \{\{ item in items | filter: somePredicate}\}';
 "></div>
+
+<h1>The Filter Called 'Filter'</h1>
 
 <div reveal-at="1">
 	<textarea ui-codemirror ng-model="code1"></textarea>
