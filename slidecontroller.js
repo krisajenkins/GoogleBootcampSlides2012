@@ -5,8 +5,10 @@ angular.module('SlideshowModule', ['KeyHandlerModule', 'compile', 'ui'])
 	.directive('revealAt', function () {
 		return {
 			restrict: 'A',
-			link: function (scope, element, attr) {
-				var level = parseInt(attr.revealAt, 10);
+			link: function (scope, element, attributes) {
+				var level = parseInt(attributes.revealAt, 10);
+
+				scope.revealMax = Math.max(scope.revealMax, level);
 
 				scope.$watch("revealLevel", function (value) {
 					element.css('visibility', (value >= level) ? 'visible' : 'hidden');
